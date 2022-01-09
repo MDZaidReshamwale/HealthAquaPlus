@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">HealthAquaPlus</string>
+    <string name="get_started">Get Started</string>
+    <string name="walkthrough_text_one">
+        Every living thing needs water to grow and stay healthy.
+        "Water is the driving force in nature"
+    </string>
+    <string name="walkthough_text_two">
+        Lack of water can lead to dehydration. Even mild dehydration can drain you and
+        make you tired.
+    </string>
+    <string name="walkthrough_text_three">
+        Every cell, tissue and organ in your body needs water to work properly.
+    </string>
 </resources>
