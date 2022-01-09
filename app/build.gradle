@@ -66,4 +66,7 @@ dependencies {
     implementation 'com.daimajia.easing:library:2.0@aar'
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:2.1.2'
+
+//    gif
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 }
