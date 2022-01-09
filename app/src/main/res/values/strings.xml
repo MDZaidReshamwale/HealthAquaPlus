@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">HealthAquaPlus</string>
+    <string name="str_continue">Continue</string>
+    <string name="weight_hint">Enter your weight in Kg</string>
+    <string name="workout_hint">Your daily work out time in min/day</string>
+    <string name="wakeup_hint">Your wake up time</string>
+    <string name="sleeping_hint">Your Sleep time</string>
+    <string name="edit_info_text">Edit Your Information</string>
+    <string name="update">Update</string>
+    <string name="notif_setting_header">Notification Settings</string>
+    <string name="custom_intake_hint">Enter your custom intake target in ml</string>
+    <string name="notif_messsage_hint">Notification Message</string>
+    <string name="notif_tone_hint">Notification Tone</string>
+    <string name="notif_freq_hint">Notification Frequency</string>
+    <string name="add_info_text">Please provide some information to customize the experience for you…!!</string>
 </resources>
