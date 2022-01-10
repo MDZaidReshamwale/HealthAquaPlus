@@ -1,17 +1,16 @@
 <resources>
     <string name="app_name">HealthAquaPlus</string>
-    <string name="get_started">Get Started</string>
-    <string name="walkthrough_text_one">
-        Every living thing needs water to grow and stay healthy.
-        "Water is the driving force in nature"
-    </string>
-    <string name="walkthough_text_two">
-       Water is the best natural remedy. Drink your way to better health,
-        Every cell, tissue and organ in your body needs water to work properly.
-    </string>
-    <string name="walkthrough_text_three">
-        “Fitness is like a relationship. You can’t cheat and expect it to work”
-        “A fit, healthy body—that is the best fashion statement”
-
-    </string>
+    <string name="str_continue">Continue</string>
+    <string name="weight_hint">Enter your weight in Kg</string>
+    <string name="workout_hint">Your daily work out time in min/day</string>
+    <string name="wakeup_hint">Your wake up time</string>
+    <string name="sleeping_hint">Your Sleep time</string>
+    <string name="edit_info_text">Edit Your Information</string>
+    <string name="update">Update</string>
+    <string name="notif_setting_header">Notification Settings</string>
+    <string name="custom_intake_hint">Enter your custom intake target in ml</string>
+    <string name="notif_messsage_hint">Notification Message</string>
+    <string name="notif_tone_hint">Notification Tone</string>
+    <string name="notif_freq_hint">Notification Frequency</string>
+    <string name="add_info_text">Please provide some information to customize the experience for you…!!</string>
 </resources>
