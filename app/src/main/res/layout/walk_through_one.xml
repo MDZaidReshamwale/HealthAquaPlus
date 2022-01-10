@@ -10,11 +10,11 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/imageView2"
-        android:layout_width="274dp"
-        android:layout_height="392dp"
-        android:layout_marginStart="80dp"
+        android:layout_width="296dp"
+        android:layout_height="390dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="60dp"
         android:src="@drawable/morewater"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
