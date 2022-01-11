@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.synchronoss.water_reminder">
 
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -15,23 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthAquaPlus"
         tools:ignore="GoogleAppIndexingWarning">
-
-
+        <activity
+            android:name=".StatsActivity"
+            android:exported="false" />
         <activity
             android:name=".WalkThroughActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            >
-        </activity>
-
-
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".InitUserInfoActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            >
-        </activity>
-
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -41,8 +34,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
     </application>
+
 </manifest>
