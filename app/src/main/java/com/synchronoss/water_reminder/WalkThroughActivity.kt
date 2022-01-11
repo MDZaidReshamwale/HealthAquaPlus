@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import kotlinx.android.synthetic.main.activity_walk_through.*
 
-class WalkThroughActivity: AppCompatActivity() {
+class WalkThroughActivity : AppCompatActivity() {
     private var viewPagerAdapter: WalkThroughAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +32,7 @@ class WalkThroughActivity: AppCompatActivity() {
         super.onStart()
         getStarted.setOnClickListener {
 
-           // startActivity(Intent(this, InitUserInfoActivity::class.java))
+            startActivity(Intent(this, InitUserInfoActivity::class.java))
             finish()
 
         }
@@ -94,4 +94,3 @@ class WalkThroughActivity: AppCompatActivity() {
     }
 
 }
-
