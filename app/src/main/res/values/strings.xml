@@ -12,6 +12,7 @@
     <string name="notif_messsage_hint">Notification Message</string>
     <string name="notif_tone_hint">Notification Tone</string>
     <string name="notif_freq_hint">Notification Frequency</string>
+    <string name="pref_notification_message_value">Hey… It\'s time to drink some water…</string>
     <string name="add_info_text">Please provide some information to customize the experience for you…!!</string>
 
     <!--r1-->
