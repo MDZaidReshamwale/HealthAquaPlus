@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.splash_screen_activity)
         setContentView(R.layout.activity_main)
         sharedPref = getSharedPreferences(AppUtils.USERS_SHARED_PREF, AppUtils.PRIVATE_MODE)
 
@@ -30,7 +32,8 @@ class MainActivity : AppCompatActivity() {
         totalIntake = sharedPref.getInt(AppUtils.TOTAL_INTAKE, 0)
 
         if (sharedPref.getBoolean(AppUtils.FIRST_RUN_KEY, true)) {
-            startActivity(Intent(this, WalkThroughActivity::class.java))
+//            startActivity(Intent(this,SplashScreen::class.java))
+            startActivity(Intent(this , WalkThroughActivity::class.java))
             finish()
         } else if (totalIntake <= 0) {
             startActivity(Intent(this, InitUserInfoActivity::class.java))
