@@ -13,4 +13,21 @@
     <string name="notif_tone_hint">Notification Tone</string>
     <string name="notif_freq_hint">Notification Frequency</string>
     <string name="add_info_text">Please provide some information to customize the experience for you…!!</string>
+
+<!--r1-->
+    <string name="get_started">Get Started</string>
+    <string name="walkthrough_text_one">
+        Every living thing needs water to grow and stay healthy.
+        Water is the driving force in nature.
+    </string>
+    <string name="walkthough_text_two">
+       Water is the best natural remedy. Drink your way to better health,
+        Every cell, tissue and organ in your body needs water to work properly.
+    </string>
+    <string name="walkthrough_text_three">
+        Fitness is like a relationship. You can’t cheat and expect it to work
+        A fit, healthy body—that is the best fashion statement
+
+    </string>
+
 </resources>

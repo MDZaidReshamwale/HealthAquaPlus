@@ -5,6 +5,10 @@ import java.util.*
 
 class AppUtils {
     companion object {
+        fun calculateIntake(weight: Int, workTime: Int): Double {
+            return ((weight * 100 / 3.0) + (workTime / 6 * 7))
+
+        }
 
 
         fun getCurrentDate(): String? {

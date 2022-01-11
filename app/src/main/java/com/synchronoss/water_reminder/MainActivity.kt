@@ -1,5 +1,6 @@
 package com.synchronoss.water_reminder
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.os.Handler
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.google.android.material.snackbar.Snackbar
+import com.synchronoss.water_reminder.helper.SqliteHelper
 import com.synchronoss.water_reminder.utils.AppUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -22,10 +24,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        sharedPref = getSharedPreferences(AppUtils.USERS_SHARED_PREF, AppUtils.PRIVATE_MODE)
+
 
         totalIntake = sharedPref.getInt(AppUtils.TOTAL_INTAKE, 0)
-//        date
+
+        if (sharedPref.getBoolean(AppUtils.FIRST_RUN_KEY, true)) {
+            startActivity(Intent(this, WalkThroughActivity::class.java))
+            finish()
+        } else if (totalIntake <= 0) {
+            startActivity(Intent(this, InitUserInfoActivity::class.java))
+            finish()
+        }
+
         dateNow = AppUtils.getCurrentDate()!!
+
     }
 
 
