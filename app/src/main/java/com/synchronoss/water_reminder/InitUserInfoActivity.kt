@@ -18,13 +18,15 @@ import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.util.*
 
-class InitUserInfoActivity : AppCompatActivity(){
+class InitUserInfoActivity : AppCompatActivity() {
+
     private var weight: String = ""
     private var workTime: String = ""
     private var wakeupTime: Long = 0
     private var sleepingTime: Long = 0
     private lateinit var sharedPref: SharedPreferences
     private var doubleBackToExitPressedOnce = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -89,9 +91,8 @@ class InitUserInfoActivity : AppCompatActivity(){
 
         btnContinue.setOnClickListener {
 
-            val imm: InputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-            val init_user_info_parent_layout = null//changes made
-          //  imm.hideSoftInputFromWindow(init_user_info_parent_layout.windowToken, 0)//changed Window Token
+            val imm: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(init_user_info_parent_layout.windowToken, 0)
 
             weight = etWeight.editText!!.text.toString()
             workTime = etWorkTime.editText!!.text.toString()
@@ -122,10 +123,10 @@ class InitUserInfoActivity : AppCompatActivity(){
                     editor.putLong(AppUtils.SLEEPING_TIME_KEY, sleepingTime)
                     editor.putBoolean(AppUtils.FIRST_RUN_KEY, false)
 
-                   /* val totalIntake = AppUtils.calculateIntake(weight.toInt(), workTime.toInt())
+                    val totalIntake = AppUtils.calculateIntake(weight.toInt(), workTime.toInt())
                     val df = DecimalFormat("#")
                     df.roundingMode = RoundingMode.CEILING
-                    editor.putInt(AppUtils.TOTAL_INTAKE, df.format(totalIntake).toInt())*/
+                    editor.putInt(AppUtils.TOTAL_INTAKE, df.format(totalIntake).toInt())
 
                     editor.apply()
                     startActivity(Intent(this, MainActivity::class.java))
