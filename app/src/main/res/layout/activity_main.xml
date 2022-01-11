@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/btnMenu"
-        android:layout_width="50dp"
+        android:layout_width="53dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
@@ -73,6 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/baloo"
         android:text="Daily Drink Target"
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
@@ -97,7 +98,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/newsplash_gradient">
 
             <View
                 style="@style/DividerHorizontal"
@@ -128,8 +130,8 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="37dp"
+                        android:layout_height="34dp"
                         android:src="@drawable/ic_water_glass" />
 
                     <TextView
@@ -137,7 +139,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="50 ml"
-                        android:textColor="@color/colorBlack" />
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/white"  />
                 </LinearLayout>
 
                 <View
@@ -164,8 +167,8 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
                         app:srcCompat="@drawable/ic_coffee_cup" />
 
                     <TextView
@@ -173,7 +176,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="100 ml"
-                        android:textColor="@color/colorBlack" />
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/white"  />
 
                 </LinearLayout>
 
@@ -191,8 +195,8 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="35dp"
+                        android:layout_height="34dp"
                         app:srcCompat="@drawable/ic_tea" />
 
                     <TextView
@@ -200,7 +204,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="150 ml"
-                        android:textColor="@color/colorBlack" />
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/white"  />
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -239,8 +244,8 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
                         app:srcCompat="@drawable/ic_cola" />
 
                     <TextView
@@ -248,7 +253,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="200 ml"
-                        android:textColor="@color/colorBlack" />
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/white"  />
 
                 </LinearLayout>
 
@@ -266,16 +272,17 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="42dp"
+                        android:layout_height="36dp"
                         app:srcCompat="@drawable/ic_juice" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:fontFamily="@font/baloo"
                         android:text="250 ml"
-                        android:textColor="@color/colorBlack" />
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 
@@ -293,8 +300,8 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="41dp"
+                        android:layout_height="37dp"
                         app:srcCompat="@drawable/ic_milk" />
 
                     <TextView
@@ -303,7 +310,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Custom"
-                        android:textColor="@color/colorBlack" />
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/white"  />
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -325,7 +333,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvIntook"
         app:markerColor="@color/colorSkyBlue"
         app:markers="100"
-        app:progressBackgroundColor="#43F69F"
+        app:progressBackgroundColor="#CDB2FF59"
         app:progressBarHeight="10dp"
         app:progressColor="@color/colorWhite"
         app:textColor="@color/colorWhite"
@@ -340,6 +348,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="2000"
+        android:fontFamily="@font/kanit"
         android:textColor="@color/colorWhite"
         android:textSize="35sp"
         android:textStyle="bold"
@@ -353,6 +362,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginBottom="4dp"
         android:text="/3500 ml"
+        android:fontFamily="@font/baloo"
         android:textColor="@color/colorWhite"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvIntook"
