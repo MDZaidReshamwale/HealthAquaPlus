@@ -16,10 +16,9 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".StatsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".fragements.BottomSheetFragment"
-            android:exported="false" />
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
         <activity
             android:name=".WalkThroughActivity"
             android:exported="true"

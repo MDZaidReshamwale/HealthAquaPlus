@@ -24,13 +24,14 @@ class MainActivity : AppCompatActivity() {
     private var inTook: Int = 0
     private lateinit var sharedPref: SharedPreferences
     private lateinit var dateNow: String
+    private lateinit var sqliteHelper: SqliteHelper
     private var snackbar: Snackbar? = null
     private var selectedOption: Int? = null
     private var doubleBackToExitPressedOnce = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        sqliteHelper = SqliteHelper(this)
         setContentView(R.layout.splash_screen_activity)
         setContentView(R.layout.activity_main)
         sharedPref = getSharedPreferences(AppUtils.USERS_SHARED_PREF, AppUtils.PRIVATE_MODE)
@@ -51,6 +52,17 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+    fun updateValues() {
+        totalIntake = sharedPref.getInt(AppUtils.TOTAL_INTAKE, 0)
+
+        inTook = sqliteHelper.getIntook(dateNow)
+
+        setWaterLevel(inTook, totalIntake)
+    }
+
+
+
     override fun onStart() {
         super.onStart()
 
@@ -60,6 +72,12 @@ class MainActivity : AppCompatActivity() {
             outValue,
             true
         )
+
+
+//        stats listner
+        btnStats.setOnClickListener {
+            startActivity(Intent(this, StatsActivity::class.java))
+        }
 
 
 //        water intake listner
