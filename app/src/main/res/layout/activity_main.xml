@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main_activity_parent"
     android:background="@drawable/ic_app_bg"
     tools:context=".MainActivity">
 
@@ -66,7 +67,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:srcCompat="@drawable/ic_plus_solid" />
+        app:srcCompat="@drawable/ic_plus_solid"
+        android:focusable="true" />
 
     <TextView
         android:id="@+id/textView5"
@@ -322,26 +324,26 @@
 
     <params.com.stepprogressview.StepProgressView
         android:id="@+id/intakeProgress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="362dp"
+        android:layout_height="24dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:maxWidth="5dp"
+        android:maxWidth="9dp"
         app:currentProgress="60"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvIntook"
         app:markerColor="@color/colorSkyBlue"
-        app:markers="100"
+
         app:progressBackgroundColor="#43F69F"
-        app:progressBarHeight="10dp"
+        app:progressBarHeight="17dp"
         app:progressColor="@color/colorWhite"
         app:textColor="@color/colorWhite"
         app:textMargin="5dp"
         app:textSize="15sp"
-        app:totalProgress="130" />
+        app:totalProgress="100" />
 
     <TextView
         android:id="@+id/tvIntook"

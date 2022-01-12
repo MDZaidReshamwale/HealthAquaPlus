@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/kanit"
-        android:text="WELCOME TO PROJECT"
+        android:text="LET'S STAY HYDRATED"
         android:textColor="@color/colorWhite"
         android:textSize="22sp"
         android:textStyle="bold"

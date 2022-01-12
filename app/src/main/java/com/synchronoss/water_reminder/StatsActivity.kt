@@ -3,9 +3,9 @@ package com.synchronoss.water_reminder
 import android.content.SharedPreferences
 import android.database.Cursor
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.components.LimitLine
@@ -19,12 +19,14 @@ import com.synchronoss.water_reminder.utils.ChartXValueFormatter
 import kotlinx.android.synthetic.main.activity_stats.*
 import kotlin.math.max
 
+
 class StatsActivity : AppCompatActivity() {
 
     private lateinit var sharedPref: SharedPreferences
     private lateinit var sqliteHelper: SqliteHelper
     private var totalPercentage: Float = 0f
     private var totalGlasses: Float = 0f
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stats)
@@ -39,7 +41,6 @@ class StatsActivity : AppCompatActivity() {
         val entries = ArrayList<Entry>()
         val dateArray = ArrayList<String>()
 
-//        Used the cursor to point the data
         val cursor: Cursor = sqliteHelper.getAllStats()
 
         if (cursor.moveToFirst()) {
@@ -81,10 +82,8 @@ class StatsActivity : AppCompatActivity() {
 
             val leftAxis = chart.axisLeft
             leftAxis.axisMinimum = 0f // always start at zero
-            // entries is not empty here
-          //  val maxObject: Entry = entries.maxBy { it.y }!!
-            // 15% margin on top
-           //leftAxis.axisMaximum = max(a = maxObject.y, b = 100f) + 15f
+            val maxObject: Entry = entries.maxByOrNull { it.y }!! // entries is not empty here
+            leftAxis.axisMaximum = max(a = maxObject.y, b = 100f) + 15f // 15% margin on top
             val targetLine = LimitLine(100f, "")
             targetLine.enableDashedLine(5f, 5f, 0f)
             leftAxis.addLimitLine(targetLine)
@@ -120,7 +119,11 @@ class StatsActivity : AppCompatActivity() {
                 remainingIntake.text = "0 ml"
             }
 
-            targetIntake.text = "${sharedPref.getInt(AppUtils.TOTAL_INTAKE, 0)} ml"
+            targetIntake.text = "${sharedPref.getInt(
+                AppUtils.TOTAL_INTAKE,
+                0
+            )
+            } ml"
 
             val percentage = sqliteHelper.getIntook(AppUtils.getCurrentDate()!!) * 100 / sharedPref.getInt(
                 AppUtils.TOTAL_INTAKE,
@@ -132,3 +135,5 @@ class StatsActivity : AppCompatActivity() {
         }
     }
 }
+
+

@@ -51,7 +51,6 @@ class SqliteHelper(val context: Context) : SQLiteOpenHelper(
         return -1
     }
 
-    @SuppressLint("Range")
     fun getIntook(date: String): Int {
         val selectQuery = "SELECT $KEY_INTOOK FROM $TABLE_STATS WHERE $KEY_DATE = ?"
         val db = this.readableDatabase

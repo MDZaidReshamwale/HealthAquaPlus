@@ -18,7 +18,6 @@ import com.synchronoss.water_reminder.MainActivity
 import com.synchronoss.water_reminder.R
 import com.synchronoss.water_reminder.utils.AppUtils
 import java.util.*
-
 class NotificationHelper(val ctx: Context) {
     private var notificationManager: NotificationManager? = null
 
@@ -122,7 +121,9 @@ class NotificationHelper(val ctx: Context) {
         return notify
     }
 
-
+    /* Thanks to:
+     * https://stackoverflow.com/questions/7676149/compare-only-the-time-portion-of-two-dates-ignoring-the-date-part
+    */
     private fun compareTimes(currentTime: Date, timeToRun: Date): Long {
         val currentCal = Calendar.getInstance()
         currentCal.time = currentTime

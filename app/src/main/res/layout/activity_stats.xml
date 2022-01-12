@@ -7,7 +7,7 @@
     android:background="@drawable/ic_app_bg"
     tools:context=".StatsActivity">
 
-<!--    chart ( graph)-->
+    <!--    chart ( graph)-->
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart"
         android:layout_width="0dp"
@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!--    Previous button (back button)-->
+    <!--    Previous button (back button)-->
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="40dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_arrow_circle_left_solid" />
 
-<!--    card view store the graphical (circle ) -->
+    <!--    card view store the graphical (circle ) -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="0dp"
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-<!--            Wave loading for displaying intake in circle-->
+            <!--            Wave loading for displaying intake in circle-->
             <me.itangqi.waveloadingview.WaveLoadingView
                 android:id="@+id/waterLevelView"
                 android:layout_width="250dp"
@@ -111,7 +111,7 @@
 
             </LinearLayout>
 
-<!--            Second phase-->
+            <!--            Second phase-->
             <LinearLayout
                 android:id="@+id/linearLayout8"
                 android:layout_width="wrap_content"

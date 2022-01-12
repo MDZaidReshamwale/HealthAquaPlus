@@ -20,6 +20,7 @@ import java.util.*
 
 class InitUserInfoActivity : AppCompatActivity() {
 
+
     private var weight: String = ""
     private var workTime: String = ""
     private var wakeupTime: Long = 0
@@ -154,3 +155,4 @@ class InitUserInfoActivity : AppCompatActivity() {
         Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 1000)
     }
 }
+

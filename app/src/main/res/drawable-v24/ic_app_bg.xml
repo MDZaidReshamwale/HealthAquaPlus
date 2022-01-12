@@ -12,9 +12,9 @@
 
         <path
                 android:pathData="M-365,-196a378.5,523 0,1 0,757 0a378.5,523 0,1 0,-757 0z"
-                android:fillColor="#1632E6"/>
+                android:fillColor="#448AFF"/>
         <path
                 android:pathData="M238,211a154,211 0,1 0,308 0a154,211 0,1 0,-308 0z"
-                android:fillColor="#383BFA"/>
+                android:fillColor="#7C4DFF"/>
     </group>
 </vector>
